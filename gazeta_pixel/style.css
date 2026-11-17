@@ -1,0 +1,330 @@
+/* ===== GAZETA PIXEL: CSS EXTERNO ===== */
+
+/* SELETOR DE TAG: rolagem suave quando um link interno é clicado */
+html {
+  scroll-behavior: smooth;
+}
+
+/* SELETOR DE TAG: vale para a página inteira */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222222;
+}
+
+/* SELETOR DE TAG: toda imagem ocupa a largura do lugar onde está */
+img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* SELETOR AGRUPADO: a mesma regra para h2 e h3 */
+h2, h3 {
+  font-family: "Courier New", monospace;
+  margin-top: 0;
+}
+
+/* ----- CABEÇALHO (Santiago) ----- */
+
+/* SELETOR DE CLASSE */
+.santiago_cabecalho {
+  background-color: #6a1b9a;
+  color: white;
+  text-align: center;
+  padding: 24px;
+}
+
+/* SELETOR ENCADEADO: os botões que estão dentro da div de controles */
+.santiago_controles button {
+  background-color: #222222;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ----- MENU (Santiago) ----- */
+.santiago_menu {
+  background-color: #222222;
+  text-align: center;
+}
+
+/* SELETOR ENCADEADO: a ul que está dentro do menu */
+.santiago_menu ul {
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+}
+
+.santiago_menu li {
+  display: inline-block;
+  margin: 4px 8px;
+}
+
+.santiago_menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.santiago_menu li a:hover {
+  color: #fdd835;
+}
+
+/* ----- ÁREA PRINCIPAL ----- */
+
+/* SELETOR DE ID: centraliza o conteúdo e limita a largura */
+#container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+/* caixa branca reaproveitada em várias seções */
+.santiago_caixa {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* botão amarelo reaproveitado em várias seções */
+.santiago_botao {
+  display: inline-block;
+  background-color: #fdd835;
+  color: #222222;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* link "Voltar ao topo" no fim de cada seção */
+.santiago_voltar {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #222222;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ----- BANNER (Santiago) ----- */
+.santiago_banner {
+  background-image: url("img/banner.png");
+  background-size: cover;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+}
+
+/* ===== GRID C: áreas nomeadas nas notícias (João Victor) ===== */
+.joaov_grade_noticias {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "principal lateral"
+    "plantao   lateral";
+  gap: 16px;
+}
+
+.joaov_principal {
+  grid-area: principal;
+}
+
+.joaov_plantao {
+  grid-area: plantao;
+}
+
+.joaov_lateral {
+  grid-area: lateral;
+}
+
+/* ===== GRID A: colunas iguais com repeat() (João Victor) ===== */
+.joaov_grade_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.joaov_card {
+  text-align: center;
+}
+
+.joaov_grade_galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ===== GRID B: proporções diferentes no guia (Santiago) ===== */
+.santiago_grade_guia {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 16px;
+}
+
+/* ----- CARROSSEL (João Victor) ----- */
+.joaov_carrossel {
+  text-align: center;
+}
+
+figure {
+  margin: 0;
+}
+
+#joaov_foto {
+  max-width: 640px;
+}
+
+.joaov_nova_capa {
+  max-width: 640px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+/* ----- TABELA (João Pedro) ----- */
+
+/* deixa a tabela rolar para o lado em telas estreitas */
+.joaop_rolagem {
+  overflow-x: auto;
+}
+
+.joaop_tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* SELETOR AGRUPADO: th e td recebem a mesma borda */
+th, td {
+  border: 1px solid #999999;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #222222;
+  color: white;
+}
+
+/* ----- CAMPOS DE FORMULÁRIO (João Pedro) ----- */
+fieldset {
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+.joaop_campo {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin: 4px 0 12px;
+}
+
+/* ----- JANELA MODAL (João Pedro) ----- */
+
+/* fundo escuro que cobre a tela toda; começa escondido */
+.joaop_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* classe colocada pelo JavaScript para mostrar o modal */
+.joaop_modal_aberto {
+  display: block;
+}
+
+.joaop_modal_caixa {
+  max-width: 420px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+#joaop_modal_imagem {
+  width: auto;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+/* ----- RODAPÉ (Santiago) ----- */
+.santiago_rodape {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+/* ===== MODO ESCURO: classe colocada no body pelo JavaScript (Santiago) ===== */
+.santiago_escuro {
+  background-color: #181818;
+  color: #eeeeee;
+}
+
+/* SELETOR ENCADEADO: as caixas que estão dentro do body escuro */
+.santiago_escuro .santiago_caixa {
+  background-color: #2a2a2a;
+}
+
+/* ===== PERSONALIZAÇÃO: segundo estado de cada área (Santiago) ===== */
+/* ficam depois do modo escuro para vencerem quando os dois estiverem ligados */
+.santiago_topo_alt {
+  background-color: #fdd835;
+  color: #222222;
+}
+
+.santiago_menu_alt {
+  background-color: #00695c;
+}
+
+.santiago_cards_alt .joaov_card {
+  background-color: #fff3c4;
+  color: #222222;
+}
+
+.santiago_caixa.santiago_lateral_alt {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+.santiago_rodape_alt {
+  background-color: #6a1b9a;
+}
+
+/* ===== RESPONSIVIDADE: telas de até 768px (João Victor) ===== */
+@media (max-width: 768px) {
+  .joaov_grade_noticias {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "principal"
+      "lateral"
+      "plantao";
+  }
+
+  .joaov_grade_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .joaov_grade_galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .santiago_grade_guia {
+    grid-template-columns: 1fr;
+  }
+}
